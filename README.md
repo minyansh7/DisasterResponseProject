@@ -33,4 +33,4 @@ train_classifier.py, a machine learning pipeline that:
 
 3. Flask Web App
 the flask web app:
--Add data visualizations using Plotly in the web app. 
+- Add data visualizations using Plotly in the web app. 
