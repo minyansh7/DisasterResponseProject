@@ -88,10 +88,10 @@ def build_model():
     parameters = {
         #'vectorizer__ngram_range':((1,1),(1,2)),#the range for a string of n words
         #'tfidy_smooth_idf':[True,False],
-        'clf__estimator__l1_ratio': [0.1,0.15,0.2,0.25,0.3,0.35],
-        'clf__estimator__alpha': [0.0001,0.001,0.01,0.1],
-        'clf__estimator__penalty':['l2','l1','elasticnet','none'],
-        'clf__estimator__loss':['hinge','log','squared hinge','modified_huber','perceptron']
+        #'clf__estimator__l1_ratio': [0.1,0.15,0.2,0.25,0.3,0.35],
+        'clf__estimator__alpha': [0.0001,0.001],
+        'clf__estimator__penalty':['l2','l1',],
+        'clf__estimator__loss':['hinge','log']
     }
     cv = GridSearchCV(pipeline,parameters,cv=3)
     return cv
@@ -102,10 +102,7 @@ def evaluate_model(model, X_test, Y_test, category_name):
     '''
     Y_test_pred = model.predict(X_test)
     print('Accuracy score:\n'.format(accuracy_score(Y_test, Y_test_pred)))
-    try:
-        print(classification_report(Y_test, Y_pred, target_names=category_name))
-    except:
-        print('classification report on whole dataset is not working.')
+    print(classification_report(Y_test, Y_pred, target_names=category_name))
 
 def save_model(model, model_filepath):
     '''

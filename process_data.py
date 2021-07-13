@@ -5,19 +5,20 @@ from sqlalchemy import create_engine
 
 
 def load_data(messages_filepath, categories_filepath):
-    messages = pd.read_csv('messages_filepath')
-    categories = pd.read_csv('categories_filepath')
+    messages = pd.read_csv(messages_filepath)
+    categories = pd.read_csv(categories_filepath)
     #merge datasets
     df = messages.merge(categories,how='outer',on=['id'])
     return df
 
 def clean_data(df):
-    #split the values in 'categories' column
-    #create a dataframe of the 36 individual category columns
-    #use the first row of categories dataframe to create column names
-    #use this row to extract a list of new column names
-    #take everything up to the second to last character of each string with slicing     
-    #rename columns of 'categories' with new column names
+    '''
+    DESCRIPTION:
+    1.split the values in 'categories' column,create a dataframe of the 36 individual category columns
+    2.use the first row of categories dataframe to create column names
+    3.extract a list of new column names, take everything up to the second to last character of each 
+    4.rename columns of 'categories' with new column names
+    '''
     categories = df['categories'].str.split(';',expand=True)
     row = categories.iloc[0]
     category_colnames=list(map(lambda x: x[:-2], row))
