@@ -16,14 +16,14 @@ Machine learning are critical to help different organizations to understand whic
 There are three components for this project.
 
 1. ETL Pipeline
-process_data.py, a data cleaning pipeline that:
+`process_data.py`, a data cleaning pipeline that:
 - Loads the messages and categories datasets
 - Merges the two datasets
 - Cleans the data
 - Stores it in a SQLite database
 
 2. ML Pipeline
-train_classifier.py, a machine learning pipeline that:
+`train_classifier.py`, a machine learning pipeline that:
 - Loads data from the SQLite database
 - Splits the dataset into training and test sets
 - Builds a text processing and machine learning pipeline
