@@ -1,10 +1,11 @@
 # Disaster Response Project
 
 ## Table of Contents
-- [Project Overview](#Project Overview)
-- [Project Components](#Project Components)
-- [Project Installation](#Project Installation)
-- [Live Demo](#Live Demo)
+
+- [Project Overview](#Project-Overview)
+- [Project Components](#Project-Components)
+- [Project Installation](#Project-Installation)
+- [Live Demo](#Live-Demo)
 
 ## Project Overview
 
