@@ -5,6 +5,7 @@
 - [Project Overview](#Project-Overview)
 - [Project Components](#Project-Components)
 - [Project Installation](#Project-Installation)
+- [Project Deployment](#Project-Deployment)
 - [Live Demo](#Live-Demo)
 
 ## Project Overview
@@ -55,6 +56,75 @@ the flask web app:
     `python app/run.py`
 
 3. Go to http://0.0.0.0:3001/
+
+## Project Deployment
+1. To run the web app, go into the Terminal and type:
+`cd project folder path`
+`python app.run.py`
+
+Make sure that the web app is working locally.
+
+(Run the web app inside project folder. In the terminal, use this command to get the link for vieweing the app:
+`env | grep WORK`
+
+The link wil be:
+http://WORKSPACESPACEID-3001.WORKSPACEDOMAIN replacing WORKSPACEID and WORKSPACEDOMAIN with your values.
+)
+
+2. Next, go to www.heroku.com and create an account if you haven't already.
+
+3. In the terminal, update python using the terminal command `conda update python`
+
+4. Create a virtual environment. Note that you can create the virtual environment inside the 5_deploy folder. But then you would end up uploading that folder to Heroku unecessarily. Consider creating the virtual environment in the workspace folder. Or alternatively, you can create a .gitignore file inside the project folder so that the virtual enviornment folder gets ignored
+
+5. pip install the libraries needed for the web app. In this case those are flask, pandas, plotly, and gunicorn.
+
+6. next install the heroku command line tools with the following command:
+curl https://cli-assets.heroku.com/install-ubuntu.sh | sh
+https://devcenter.heroku.com/articles/heroku-cli#standalone-installation
+
+7. then check the installation with the command:
+`heroku —-version`
+
+8. next, log into heroku using the command:
+`heroku login`
+and then enter your email and password when asked
+
+9. remove app.run() from the run.py file
+
+10. go into the deployment folder with:
+`cd project folder path`
+
+11. create a procfile with the command
+`touch Procfile`
+and put the following in the Procfile
+`web gunicorn worldbank:app`
+
+12. Then create a requirements file with this command:
+`pip freeze > requirements.txt`
+
+13. Next, initialize a git repository with the following commands:
+`git init`
+`git add .`
+
+14. configure the email and user name, you can use these commands:
+`git config --global user.email email@example.com`
+`git config --global user.name "my name"`
+
+15. make a commit with this command:
+`git commit -m "first commit"`
+
+16. create a uniquely named heroku app. Use this command:
+`heroku create my-app-name`
+If you get a message that the app name is already taken, try again with a different app name until you find one that is not taken
+
+17. check that heroku added a remote repository with this command:
+`git remote -v`
+
+18. push the app to Heroku:
+`git push heroku master`
+
+Go to the link for your web app to see if it's working. The link should be https://app-name.heroku.com
 
 ## Live Demo
 
