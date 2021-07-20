@@ -1,4 +1,10 @@
-# DisasterResponseProject
+# Disaster Response Project
+
+## Table of Contents
+* [Project Overview](#Project Overview)
+* [Project Components](#Project Components)
+* [Project Installation](#Project Installation)
+* [Live Demo](#Live Demo)
 
 ### Project Overview
 
@@ -48,4 +54,6 @@ the flask web app:
     `python app/run.py`
 
 3. Go to http://0.0.0.0:3001/
+
+### Live Demo
 
