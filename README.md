@@ -98,9 +98,9 @@ and then enter your email and password when asked
 11. create a procfile with the command
 `touch Procfile`
 and put the following in the Procfile
-`web gunicorn run:DisasterResponseApp`
+`web gunicorn run:app`
 
-To deploy the ML model we need to create 2 files. The first one is Procfile (no file extension) in this we will write “web: gunicorn run:DisasterResponseApp”. The web depicts that this is a web app and gunicorn is the server on which our app will run. The follwoing "run" represents the file name from where the Web App should start. The second part "DisasterResponseApp" represents the name of the app.
+To deploy the ML model we need to create 2 files. The first one is Procfile (no file extension) in this we will write “web: gunicorn run:DisasterResponseApp”. The web depicts that this is a web app and gunicorn is the server on which our app will run. The follwoing "run" represents the file name from where the Web App should start. The second part "app" represents the name of the app.
 
 
 12. Then create a requirements file with this command:
