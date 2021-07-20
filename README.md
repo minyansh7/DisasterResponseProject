@@ -60,7 +60,7 @@ the flask web app:
 ## Project Deployment
 1. To run the web app, go into the Terminal and type:
 `cd project folder path`
-`python app.run.py`
+`python app/run.py`
 
 Make sure that the web app is working locally.
 
@@ -75,7 +75,7 @@ http://WORKSPACESPACEID-3001.WORKSPACEDOMAIN replacing WORKSPACEID and WORKSPACE
 
 3. In the terminal, update python using the terminal command `conda update python`
 
-4. Create a virtual environment. Note that you can create the virtual environment inside the 5_deploy folder. But then you would end up uploading that folder to Heroku unecessarily. Consider creating the virtual environment in the workspace folder. Or alternatively, you can create a .gitignore file inside the project folder so that the virtual enviornment folder gets ignored
+4. Create a virtual environment. Note that you can create the virtual environment inside the project folder. But then you would end up uploading that folder to Heroku unecessarily. Consider creating the virtual environment in the workspace folder. Or alternatively, you can create a .gitignore file inside the project folder so that the virtual enviornment folder gets ignored
 
 5. pip install the libraries needed for the web app. In this case those are flask, pandas, plotly, and gunicorn.
 
@@ -98,7 +98,10 @@ and then enter your email and password when asked
 11. create a procfile with the command
 `touch Procfile`
 and put the following in the Procfile
-`web gunicorn worldbank:app`
+`web gunicorn run:DisasterResponseApp`
+
+To deploy the ML model we need to create 2 files. The first one is Procfile (no file extension) in this we will write “web: gunicorn run:DisasterResponseApp”. The web depicts that this is a web app and gunicorn is the server on which our app will run. The follwoing "run" represents the file name from where the Web App should start. The second part "DisasterResponseApp" represents the name of the app.
+
 
 12. Then create a requirements file with this command:
 `pip freeze > requirements.txt`
