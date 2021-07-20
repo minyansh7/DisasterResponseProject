@@ -6,7 +6,7 @@
 * [Project Installation](#Project Installation)
 * [Live Demo](#Live Demo)
 
-### Project Overview
+## Project Overview
 
 In this project, it analyze thousands of real messages that were sent through natural disasters, either through social media or directly to disaster response organizations.
 
@@ -18,7 +18,7 @@ The project also includes the web app  that provides visualizations, and help em
 
 Machine learning are critical to help different organizations to understand which messages are relevant to them, and which messages to prioritize.
 
-### Project Components
+## Project Components
 There are three components for this project.
 
 1. ETL Pipeline
@@ -41,7 +41,7 @@ There are three components for this project.
 the flask web app:
 - Add data visualizations using Plotly in the web app. 
 
-### Project Installation
+## Project Installation
 #### Instructions:
 1. Run the following commands in the project's root directory to set up your database and model.
 
@@ -55,5 +55,5 @@ the flask web app:
 
 3. Go to http://0.0.0.0:3001/
 
-### Live Demo
+## Live Demo
 
