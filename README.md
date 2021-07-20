@@ -77,6 +77,10 @@ http://WORKSPACESPACEID-3001.WORKSPACEDOMAIN replacing WORKSPACEID and WORKSPACE
 
 4. Create a virtual environment. Note that you can create the virtual environment inside the project folder. But then you would end up uploading that folder to Heroku unecessarily. Consider creating the virtual environment in the workspace folder. Or alternatively, you can create a .gitignore file inside the project folder so that the virtual enviornment folder gets ignored
 
+`python3 -m venv DisasterResponsevenv`
+# Activate the new environment (Mac/Linux)
+`source DisasterResponsevenv/bin/activate`
+
 5. pip install the libraries needed for the web app. In this case those are flask, pandas, plotly, and gunicorn.
 
 6. next install the heroku command line tools with the following command:
