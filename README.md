@@ -88,10 +88,10 @@ curl https://cli-assets.heroku.com/install-ubuntu.sh | sh
 https://devcenter.heroku.com/articles/heroku-cli#standalone-installation
 
 7. then check the installation with the command:
-`heroku —-version`
+`heroku --version`
 
 8. next, log into heroku using the command:
-`heroku login`
+`heroku login -i`
 and then enter your email and password when asked
 
 9. remove `host='0.0.0.0', port=3001` in app.run() from the run.py file. Instead, use `app.run(debug=True)`.
