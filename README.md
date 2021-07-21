@@ -81,7 +81,8 @@ http://WORKSPACESPACEID-3001.WORKSPACEDOMAIN replacing WORKSPACEID and WORKSPACE
 Activate the new environment (Mac/Linux)
 `source DisasterResponsevenv/bin/activate`
 
-5. pip install the libraries needed for the web app. In this case those are flask, pandas, plotly, and gunicorn.
+5. pip install the libraries needed for the web app. In this case those are flask, pandas, plotly, and gunicorn. 
+`pip install flask pandas plotly gunicorn`
 
 6. next install the heroku command line tools with the following command:
 curl https://cli-assets.heroku.com/install-ubuntu.sh | sh
