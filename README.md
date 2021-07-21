@@ -94,7 +94,7 @@ https://devcenter.heroku.com/articles/heroku-cli#standalone-installation
 `heroku login`
 and then enter your email and password when asked
 
-9. remove app.run() from the run.py file
+9. remove `host='0.0.0.0', port=3001` in app.run() from the run.py file. Instead, use `app.run(debug=True)`.
 
 10. go into the deployment folder with:
 `cd project folder path`
@@ -128,7 +128,14 @@ If you get a message that the app name is already taken, try again with a differ
 17. check that heroku added a remote repository with this command:
 `git remote -v`
 
-18. push the app to Heroku:
+18. before finally push your local git repository to the remote Heroku repository, you will need the following environment variables (kind of secrets) to send along:
+-Set any environment variable to pass along with the push
+`heroku config:set SLUGIFY_USES_TEXT_UNIDECODE=yes`
+`heroku config:set AIRFLOW_GPL_UNIDECODE=yes`
+-Verify the variables
+`heroku config`
+
+19. push the app to Heroku:
 `git push heroku master`
 
 Go to the link for your web app to see if it's working. The link should be https://app-name.heroku.com
