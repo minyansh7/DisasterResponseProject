@@ -43,7 +43,7 @@ There are three components for this project.
 the flask web app:
 - Add data visualizations using Plotly in the web app. 
 
-## Project Installation
+## Local Installation
 #### Instructions:
 1. Run commands in the project's root directory to set up your database and model.
     - To run ETL pipeline that cleans data and stores in database
@@ -53,8 +53,6 @@ the flask web app:
 
 2. Run the following command in the app's directory to run your web app.
     `python app/run.py`
-
-3. Go to http://0.0.0.0:3001/
 
 ## Project Deployment
 1. To run the web app, go into the Terminal and type:
