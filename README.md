@@ -11,8 +11,8 @@
 
 
 ![Alt Image text](/Screenshots/visual1PieChartScreenShot.png?raw=true)
-
-
+![Alt Image text](/Screenshots/visual2BarChartScreenShot.png?raw=true)
+![Alt Image text](/Screenshots/PredictResult.png?raw=true)
 
 ## Project Overview
 
