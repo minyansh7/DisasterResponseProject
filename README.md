@@ -10,7 +10,7 @@
 
 
 
-![Alt Image text](/Screenshots/img.png?raw=true "visual1PieChartScreenShot.png")
+![Alt Image text](/Screenshots/visual1PieChartScreenShot.png?raw=true)
 
 
 
