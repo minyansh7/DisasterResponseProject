@@ -111,32 +111,41 @@ To deploy the ML model we need to create 2 files. The first one is Procfile (no 
 12. Then create a requirements file with this command:
 `pip freeze > requirements.txt`
 
-13. Next, initialize a git repository with the following commands:
+
+13.Use NLTK with Heroku Python. It can't be simplied installed through requirements.txt. Follow the following steps:
+    * nltk.txt needs to present at the root folder
+    * Add the modules you want to download like punkt, stopwords as separate row items
+    * Change the line ending from windows to UNIX.
+        - Changing the line ending is a very important step. Can be easily done through Sublime Text or Notepad++. 
+        - In Sublime Text, it can done from the View menu, then Line Endings
+    * Add NLTK to requirements.txt.
+
+14. Next, initialize a git repository with the following commands:
 `git init`
 `git add .`
 
-14. configure the email and user name, you can use these commands:
+15. configure the email and user name, you can use these commands:
 `git config --global user.email email@example.com`
 `git config --global user.name "my name"`
 
-15. make a commit with this command:
+16. make a commit with this command:
 `git commit -m "first commit"`
 
-16. create a uniquely named heroku app. Use this command:
+17. create a uniquely named heroku app. Use this command:
 `heroku create my-app-name`
 If you get a message that the app name is already taken, try again with a different app name until you find one that is not taken
 
-17. check that heroku added a remote repository with this command:
+18. check that heroku added a remote repository with this command:
 `git remote -v`
 
-18. before finally push your local git repository to the remote Heroku repository, you will need the following environment variables (kind of secrets) to send along:
+19. before finally push your local git repository to the remote Heroku repository, you will need the following environment variables (kind of secrets) to send along:
 -Set any environment variable to pass along with the push
 `heroku config:set SLUGIFY_USES_TEXT_UNIDECODE=yes`
 `heroku config:set AIRFLOW_GPL_UNIDECODE=yes`
 -Verify the variables
 `heroku config`
 
-19. push the app to Heroku:
+20. push the app to Heroku:
 `git push heroku master`
 
 Go to the link for your web app to see if it's working. The link should be https://app-name.heroku.com
