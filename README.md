@@ -45,8 +45,7 @@ the flask web app:
 
 ## Project Installation
 #### Instructions:
-1. Run the following commands in the project's root directory to set up your database and model.
-
+1. Run commands in the project's root directory to set up your database and model.
     - To run ETL pipeline that cleans data and stores in database
         `python data/process_data.py data/disaster_messages.csv data/disaster_categories.csv data/DisasterResponse.db`
     - To run ML pipeline that trains classifier and saves
@@ -62,38 +61,40 @@ the flask web app:
 `cd project folder path`
 `python app/run.py`
 
-2. Next, go to www.heroku.com and create an account if you haven't already.
+2. Next, go to www.heroku.com and create an account.
 
-3. In the terminal, update python using the terminal command `conda update python`
+3. In the terminal, before anything else, update python using the terminal command `conda update python`
 
-4. Create a virtual environment. Note that you can create the virtual environment inside the project folder. But then you would end up uploading that folder to Heroku unecessarily. Consider creating the virtual environment in the workspace folder. Or alternatively, you can create a .gitignore file inside the project folder so that the virtual enviornment folder gets ignored
+4. Create a virtual environment. 
 `python3 -m venv DisasterResponsevenv`
 Activate the new environment (Mac/Linux)
 `source DisasterResponsevenv/bin/activate`
 
+- Note that you can create the virtual environment inside the project folder. But then you would end up uploading that folder to Heroku unecessarily. Consider creating the virtual environment in the workspace folder. 
+- Or alternatively, you can create a .gitignore file inside the project folder so that the virtual enviornment folder gets ignored
+
 5. pip install the libraries needed for the web app. In this case those are flask, pandas, plotly, and gunicorn. 
 `pip install flask pandas plotly gunicorn`
 
-6. then check the installation with the command:
+6. then check the installation:
 `heroku --version`
 
-7. next, log into heroku using the command:
+7. next, log into heroku
 `heroku login -i`
-and then enter your email and password when asked
 
 8. remove `host='0.0.0.0', port=3001` in app.run() from the run.py file. Instead, use `app.run(debug=True)`.
 
-9. go into the deployment folder with:
+9. go into the deployment folder:
 `cd project folder path`
 
-10. create a procfile with the command
+10. create a procfile:
 `touch Procfile`
 and put the following in the Procfile
 `web gunicorn run:app`
 
-To deploy the ML model we need to create 2 files. The first one is Procfile (no file extension) in this we will write “web: gunicorn run:app”. The web depicts that this is a web app and gunicorn is the server on which our app will run. The follwoing "run" represents the file name from where the Web App should start. The second part "app" represents the name of the app.
+- Note: to deploy the ML model we need to create 2 files. The first one is Procfile (no file extension) in this we will write “web: gunicorn run:app”. The web depicts that this is a web app and gunicorn is the server on which our app will run. The follwoing "run" represents the file name from where the Web App should start. The second part "app" represents the name of the app.
 
-11. Then create a requirements file with this command:
+11. Then create a requirements file:
 `pip freeze > requirements.txt`
 
 12.Use NLTK with Heroku Python. It can't be simplied installed through requirements.txt. Follow the following steps:
@@ -104,7 +105,7 @@ To deploy the ML model we need to create 2 files. The first one is Procfile (no 
         - In Sublime Text, it can done from the View menu, then Line Endings
     * Add NLTK to requirements.txt.
 
-13. Next, initialize a git repository with the following commands:
+13. Next, initialize a git repository:
 `git init`
 `git add .`
 
@@ -112,14 +113,13 @@ To deploy the ML model we need to create 2 files. The first one is Procfile (no 
 `git config --global user.email email@example.com`
 `git config --global user.name "my name"`
 
-15. make a commit with this command:
+15. make a commit:
 `git commit -m "first commit"`
 
-16. create a uniquely named heroku app. Use this command:
+16. create a uniquely named heroku app. 
 `heroku create my-app-name`
-If you get a message that the app name is already taken, try again with a different app name until you find one that is not taken
 
-17. check that heroku added a remote repository with this command:
+17. check that heroku added a remote repository:
 `git remote -v`
 
 18. before finally push your local git repository to the remote Heroku repository, you will need the following environment variables (kind of secrets) to send along:
