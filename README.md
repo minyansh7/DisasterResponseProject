@@ -8,6 +8,12 @@
 - [Project Deployment](#Project-Deployment)
 - [Live Demo](#Live-Demo)
 
+
+
+![Alt Image text](/Screenshots/img.png?raw=true "visual1PieChartScreenShot.png")
+
+
+
 ## Project Overview
 
 In this project, it analyze thousands of real messages that were sent through natural disasters, either through social media or directly to disaster response organizations.
