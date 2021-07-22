@@ -4,7 +4,7 @@
 
 - [Project Overview](#Project-Overview)
 - [Project Components](#Project-Components)
-- [Project Installation](#Project-Installation)
+- [Local Installation](#Local-Installation)
 - [Project Deployment](#Project-Deployment)
 - [Live Demo](#Live-Demo)
 
