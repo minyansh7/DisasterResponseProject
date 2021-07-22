@@ -147,8 +147,8 @@ If you get a message that the app name is already taken, try again with a differ
 
 20. push the app to Heroku:
 `git push heroku master`
-
-Go to the link for your web app to see if it's working. The link should be https://app-name.heroku.com
+Go to the link for your web app to see if it's working. 
 
 ## Live Demo
+https://disaster-response-app-minyan.herokuapp.com
 
