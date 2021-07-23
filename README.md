@@ -10,7 +10,7 @@
 
 
 
-![Alt Image text](/Media/AppDemo.gif?raw=true)
+![Alt Image text](/media/AppDemo.gif?raw=true)
 
 
 ## Project Overview
