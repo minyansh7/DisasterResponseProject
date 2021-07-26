@@ -140,8 +140,10 @@ Go to the link for your web app to see if it's working.
 https://disaster-response-app-minyan.herokuapp.com
 
 ## Additional Issues
-- #### Pickle serialization: module '__main__' has no attribute 'tokenize'
+- #### Issue1: Pickle serialization: module '__main__' has no attribute 'tokenize'
+
 Reference:
 https://docs.arthur.ai/user-guide/explainability.html
+
 https://rebeccabilbro.github.io/module-main-has-no-attribute/
 
