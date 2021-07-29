@@ -148,3 +148,5 @@ https://docs.arthur.ai/user-guide/explainability.html
 
 https://rebeccabilbro.github.io/module-main-has-no-attribute/
 
+https://github.com/iammowgoud/NLP-fake-news-detection/blob/master/predictionModel.py
+
